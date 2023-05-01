@@ -57,7 +57,7 @@ export const RouterPrincipal = () => {
                     <Route index element={<InicioPanel/>}/>
                     <Route path='inicio' element={<InicioPanel/>}/>
                     <Route path='crear' element={<Crear/>}/>
-                    <Route path='gestion-usuarios' element={<Gestion/>}/>
+                    <Route path='gestio-usuarios' element={<Gestion/>}/>
                     <Route path='acerda-de' element={<Acerda/>}/>
                 </Route>
             </Routes>

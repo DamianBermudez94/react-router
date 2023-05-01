@@ -5,11 +5,6 @@ import { Articulos } from '../components/Articulos';
 import { Contacto } from '../components/Contacto';
 import { Error } from '../components/Error'
 import { ParametrosRutas } from '../components/ParametrosRutas';
-import { PanelControl } from '../components/PanelControl';
-import { Acerda } from '../components/panel/Acerda';
-import { InicioPanel } from '../components/panel/Inicio';
-import { Gestion } from '../components/panel/Gestion';
-import { Crear } from '../components/panel/Crear';
 export const RouterPrincipal = () => {
   return (
     <div>
@@ -35,12 +30,6 @@ export const RouterPrincipal = () => {
                       url
                       </NavLink>
                     </li>
-
-                    <li>
-                      <NavLink to="/panel"  className={({isActive}) => isActive ? "activado" : "" }>
-                      Panel control
-                      </NavLink>
-                    </li>
                 </ul>
             </nav>
             <Routes>
@@ -48,18 +37,9 @@ export const RouterPrincipal = () => {
                 <Route path='/inicio' element={<Inicio/>}/>
                 <Route path='/contacto' element={<Contacto/>}/>
                 <Route path='/articulos' element={<Articulos />}/>
-                <Route path='/persona/:nombre/:apellido' element={<ParametrosRutas/>}/>
-                <Route path='/persona/:nombre' element={<ParametrosRutas/>}/>
-                <Route path='/persona' element={<ParametrosRutas/>}/>
-                <Route path='/redirigir' element={<Navigate to="/persona/damian/bermudez"/>}/>
+                <Route path='/parametrosRutas/:nombre/:apellido' element={<ParametrosRutas/>}/>
+                <Route path='/redirigir' element={<Navigate to="/parametros"/>}/>
                 <Route path='*' element={<Error/>}/>
-                <Route path='/panel/*' element={<PanelControl/>}>
-                    <Route index element={<InicioPanel/>}/>
-                    <Route path='inicio' element={<InicioPanel/>}/>
-                    <Route path='crear' element={<Crear/>}/>
-                    <Route path='gestion-usuarios' element={<Gestion/>}/>
-                    <Route path='acerda-de' element={<Acerda/>}/>
-                </Route>
             </Routes>
 
         </BrowserRouter>

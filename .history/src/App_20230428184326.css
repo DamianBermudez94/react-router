@@ -23,12 +23,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.title-panel_inicio{
-  font-size: 35px;
-  color: red;
- 
-  font-weight: bold;
-}
+
 .App-link {
   color: #61dafb;
 }
@@ -36,9 +31,6 @@
   font-size: 18px;
   text-decoration: none;
   color: blue;
-  font-weight: bold;
-
-  
 }
 @keyframes App-logo-spin {
   from {

@@ -7,7 +7,7 @@ import { Error } from '../components/Error'
 import { ParametrosRutas } from '../components/ParametrosRutas';
 import { PanelControl } from '../components/PanelControl';
 import { Acerda } from '../components/panel/Acerda';
-import { InicioPanel } from '../components/panel/Inicio';
+import { Inicio } from '../components/panel/Inicio';
 import { Gestion } from '../components/panel/Gestion';
 import { Crear } from '../components/panel/Crear';
 export const RouterPrincipal = () => {
@@ -37,7 +37,7 @@ export const RouterPrincipal = () => {
                     </li>
 
                     <li>
-                      <NavLink to="/panel"  className={({isActive}) => isActive ? "activado" : "" }>
+                      <NavLink to="/panel-control"  className={({isActive}) => isActive ? "activado" : "" }>
                       Panel control
                       </NavLink>
                     </li>
@@ -53,12 +53,11 @@ export const RouterPrincipal = () => {
                 <Route path='/persona' element={<ParametrosRutas/>}/>
                 <Route path='/redirigir' element={<Navigate to="/persona/damian/bermudez"/>}/>
                 <Route path='*' element={<Error/>}/>
-                <Route path='/panel/*' element={<PanelControl/>}>
-                    <Route index element={<InicioPanel/>}/>
-                    <Route path='inicio' element={<InicioPanel/>}/>
-                    <Route path='crear' element={<Crear/>}/>
-                    <Route path='gestion-usuarios' element={<Gestion/>}/>
-                    <Route path='acerda-de' element={<Acerda/>}/>
+                <Route path='/panel-control' element={<PanelControl/>}>
+                    <Route path='/inicio' element={<Inicio/>}></Route>
+                    <Route path='/crear' element={<Crear/>}></Route>
+                    <Route path='/gestio-usuarios' element={<Gestion/>}></Route>
+                    <Route path='/acerda-de' element={<Acerda/>}></Route>
                 </Route>
             </Routes>
 
