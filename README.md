@@ -2,15 +2,15 @@
 
 -Crear rutas desde cero utilizando los hooks de react
   
-  .Routes
-  
-  .Route
-  
-  .BrowserRouter
-  
-  .Navigate
-  
-  .Navlink
+      .Routes
+
+      .Route
+
+      .BrowserRouter
+
+      .Navigate
+
+      .Navlink
   
 -Crear sub rutas utilizando el componente Outlet para poder renderizar las rutas
 
